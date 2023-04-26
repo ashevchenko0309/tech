@@ -1,11 +1,14 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import CloseIcon from "../../../../public/images/close-icon.svg";
+import CloseIcon from "@/public/images/close-icon.svg";
 
-import ScreenOne from "../../../../public/images/cases/cfus-landing/1.webp";
+import ImageOne from "@/public/images/crus.webp";
+import ImageTwo from "@/public/images/digital.webp";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../pages/_app";
-import { CaseItem, toggleCase, toggleScroll } from "../../../slices/ui";
+import { RootState } from "@/pages/_app";
+import { CaseItem, toggleCase, toggleScroll } from "@/slices/ui";
+import CaseSlider from "../components/CaseSlider";
+import CaseContainer from "@/components/cases/components/CaseContainer";
 
 const CFUSLandingCase: FC = () => {
     const isOpen = useSelector<RootState, boolean>(state => state.ui.activeCase === CaseItem.CFUS);
@@ -19,7 +22,7 @@ const CFUSLandingCase: FC = () => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed left-0 top-0 z-10 block h-full w-full overflow-x-auto bg-black px-6 pt-4 md:p-12 lg:px-12 lg:py-20 xl:grid">
+        <CaseContainer>
             <div className="mb-20 flex items-start justify-between">
                 <div className="grid grow grid-cols-5 items-end">
                     <div>
@@ -33,11 +36,22 @@ const CFUSLandingCase: FC = () => {
                     </div>
                 </div>
             </div>
-            <div onClick={onClose} className="fixed right-12 z-10 cursor-pointer rounded-full bg-black p-2">
+            <div>
+                <CaseSlider>
+                    <div className="keen-slider__slide px-32">
+                        <Image src={ImageOne} alt="slider image" className="mx-auto" />
+                    </div>
+                    <div className="keen-slider__slide px-32">
+                        <Image src={ImageTwo} alt="slider image" className="mx-auto" />
+                    </div>
+                </CaseSlider>
+            </div>
+
+            <div onClick={onClose} className="fixed top-0 right-12 z-10 cursor-pointer rounded-full bg-black p-2">
                 <Image src={CloseIcon} alt="close" className="md:w-10" />
             </div>
-            <Image src={ScreenOne} alt="First health care app screen" />
-        </div>
+            {/*<Image src={ScreenOne} alt="First health care app screen" />*/}
+        </CaseContainer>
     );
 };
 

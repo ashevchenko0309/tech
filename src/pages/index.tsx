@@ -17,6 +17,7 @@ import SayHello from "../components/SayHello";
 
 const DynamicContactForm = dynamic(() => import("../components/ContactForm/ContactForm"));
 const DynamicCFUSLandingCase = dynamic(() => import("../components/cases/CFUSLandingCase/CFUSLandingCase"));
+const DynamicHealthCareAdminCase = dynamic(() => import("../components/cases/HealthCareAdminCase/HealthCareAdminCase"));
 
 export default function Home() {
     const isBodyScrollable = useSelector<RootState>(state => state.ui.isScrollable);
@@ -75,6 +76,7 @@ export default function Home() {
                 <SayHello />
                 <Footer />
                 <DynamicCFUSLandingCase />
+                <DynamicHealthCareAdminCase />
                 <DynamicContactForm />
             </main>
         </div>

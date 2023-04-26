@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import uiReducer from "../slices/ui";
 
-/* TODO: Fonts! */
+import "keen-slider/keen-slider.min.css";
 
 const NeueHaas = localFont({
     src: [
