@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+body {
+    @apply bg-black text-white overflow-x-hidden text-slate;
+}
+
+.header {
+    @apply left-0 w-full flex justify-between z-10 items-center top-4 px-6 lg:top-0 lg:h-16
+}
+
+.banner-image {
+    @apply top-8 h-full;
+}
+
+.digital {
+    background: linear-gradient(180deg, #14232D 0%, #142328 27.21%, #13242B 100%);
+}
+
+.digital-bottom {
+    background: linear-gradient(360deg, #020202 0%, rgba(2, 2, 2, 0) 100%);
+}
+
+.services-barrel-top-gradient {
+    background: linear-gradient(180deg, #020202 0%, #020202 33%, rgba(22, 22, 22, 0) 100%);
+}
+
+.services-barrel-bottom-gradient {
+    background: linear-gradient(0deg, #020202 0%, #020202 33%, rgba(22, 22, 22, 0) 100%);
+}
+
+.services-list-gradient {
+    background: linear-gradient(0deg, #0F0F0F 0%, #020202 100%);
+}
+
+.footer-logo-top-gradient {
+    background: linear-gradient(180deg, #020202 19%, #929292 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.footer-logo-bottom-gradient {
+    background: linear-gradient(0deg, #020202 16%, #929292 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/*.footer-logo {*/
+/*    font-size: calc(var(--index) * 10);*/
+/*}*/
+
+@media (min-width: 2560px) {
+    .logo {}
+    .menu-list {}
+    .banner-description {}
+    .banner-title {}
+    .banner-subtitle {}
+    .banner-button {}
+    .digital-title {}
+    .digital-subtitle {}
+    .vision-number {}
+    .vision-title {}
+    .vision-description {}
+    .services-barrel {}
+    .services-main-description {}
+    .services-title {}
+    .services-description {}
+    .works-title {}
+    .case-title {}
+    .case-description {}
+    .build-future-title {}
+    .build-future-description {}
+    .build-future-button {}
+    .services-list-title {}
+    .services-list-subtitle {}
+    .service-list-item-title {}
+    .service-list-item-direction {}
+    .say-hello-title {}
+    .get-in-touch {}
+    .contact {}
+    .footer-logo {}
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*  }*/
+/*}*/
+

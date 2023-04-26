@@ -1,0 +1,73 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks"
+  ],
+  "env": {
+    "browser": true,
+    "jasmine": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "react/display-name": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true }],
+    "react/state-in-constructor": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/aria-role": 0,
+    "no-nested-ternary": "warn",
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0,
+    "react/no-array-index-key": "warn",
+    "consistent-return": 0,
+    "radix": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}
