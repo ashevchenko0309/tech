@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="footer-logo-bottom-gradient">c</div>
                 <div className="footer-logo-top-gradient">h</div>
             </div>
-            <div className="mb-8 flex items-center justify-between px-6 text-xs text-gray md:text-base xl:px-8">
+            <div className="mb-8 flex items-center justify-between px-6 text-xs text-gray-100 md:text-base xl:px-8">
                 <p>4K:Tech. All Rights Reserved.</p>
                 <p>©{new Date().getFullYear()}</p>
             </div>

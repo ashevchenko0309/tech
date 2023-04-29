@@ -1,9 +1,9 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import Image from "next/image";
 import CloseIcon from "../../../public/images/close-icon.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../pages/_app";
-import { toggleContactForm, toggleScroll } from "../../slices/ui";
+import { RootState } from "@/pages/_app";
+import { toggleContactForm, toggleScroll } from "@/slices/ui";
 
 const ContactForm: FC = () => {
     const isContactFormOpen = useSelector<RootState>(state => state.ui.isContactFormOpen);
@@ -37,12 +37,12 @@ const ContactForm: FC = () => {
                             type="text"
                             required
                             placeholder="Your name"
-                            className="w-full rounded-lg border border-gray bg-black p-5"
+                            className="w-full rounded-lg border border-gray-100 bg-black p-5"
                         />
                         <input
                             type="text"
                             placeholder="Select service"
-                            className="w-full rounded-lg border border-gray bg-black p-5"
+                            className="w-full rounded-lg border border-gray-100 bg-black p-5"
                         />
                     </div>
                     <div className="flex flex-col gap-6">
@@ -50,12 +50,12 @@ const ContactForm: FC = () => {
                             type="email"
                             required
                             placeholder="E-mail"
-                            className="w-full rounded-lg border border-gray bg-black p-5"
+                            className="w-full rounded-lg border border-gray-100 bg-black p-5"
                         />
                         <textarea
                             maxLength={2000}
                             placeholder="Project Description"
-                            className="min-h-[100px] w-full rounded-lg border border-gray bg-black p-5"
+                            className="min-h-[100px] w-full rounded-lg border border-gray-100 bg-black p-5"
                         />
                     </div>
                     {/* TODO: Attachment */}

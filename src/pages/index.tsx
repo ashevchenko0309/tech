@@ -18,6 +18,11 @@ import SayHello from "../components/SayHello";
 const DynamicContactForm = dynamic(() => import("../components/ContactForm/ContactForm"));
 const DynamicCFUSLandingCase = dynamic(() => import("../components/cases/CFUSLandingCase/CFUSLandingCase"));
 const DynamicHealthCareAdminCase = dynamic(() => import("../components/cases/HealthCareAdminCase/HealthCareAdminCase"));
+const DynamicHealthCareAppCase = dynamic(() => import("../components/cases/HealthCareAppCase/HealthCareAppCase"));
+const DynamicLocalizationToolCase = dynamic(
+    () => import("../components/cases/LocalizationToolCase/LocalizationToolCase")
+);
+const DynamicELearningAppCase = dynamic(() => import("../components/cases/ELearningAppCase/ELearningAppCase"));
 
 export default function Home() {
     const isBodyScrollable = useSelector<RootState>(state => state.ui.isScrollable);
@@ -77,6 +82,9 @@ export default function Home() {
                 <Footer />
                 <DynamicCFUSLandingCase />
                 <DynamicHealthCareAdminCase />
+                <DynamicLocalizationToolCase />
+                <DynamicHealthCareAppCase />
+                <DynamicELearningAppCase />
                 <DynamicContactForm />
             </main>
         </div>

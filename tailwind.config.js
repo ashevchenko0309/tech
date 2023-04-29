@@ -12,7 +12,10 @@ module.exports = {
         black: "#020202",
         green: "#13242C",
         slate: "#F1F1F1",
-        gray: "#797979"
+        gray: {
+          50: "#383838",
+          100: "#797979",
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

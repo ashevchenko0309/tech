@@ -1,10 +1,10 @@
 import HealthCareApp from "../../../public/images/health-care-app.webp";
-import { CaseItem } from "../../slices/ui";
 import CrusLanding from "../../../public/images/crus.webp";
 import HealthCareAdminApp from "../../../public/images/health-care-admin-app.webp";
 import LocalizationToolApp from "../../../public/images/localization-tool.webp";
 import WatchCommerce from "../../../public/images/watch-commerce.webp";
 import ELearningPanel from "../../../public/images/e-learning-panel.webp";
+import { CaseItem } from "@/slices/ui";
 
 export const works = [
     {
@@ -23,7 +23,7 @@ export const works = [
         image: HealthCareAdminApp,
         title: "Laboratory Management System",
         description: "Web Design & Development",
-        app: CaseItem.CFUS,
+        app: CaseItem.HEALTHCARE_ADMIN,
     },
     {
         image: LocalizationToolApp,
@@ -32,13 +32,13 @@ export const works = [
         app: CaseItem.LOCALIZATION_ADMIN,
     },
     {
-        image: WatchCommerce,
+        image: ELearningPanel,
         title: "Brand Landing page",
         description: "Web Design & Development",
         app: CaseItem.WATCHES,
     },
     {
-        image: ELearningPanel,
+        image: WatchCommerce,
         title: "e-Learning Web app",
         description: "Web Design & Development",
         app: CaseItem.E_LEARNING_APP,

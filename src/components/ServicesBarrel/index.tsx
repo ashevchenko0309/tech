@@ -24,14 +24,14 @@ const ServicesBarrel = () => {
                 </div>
                 <div className="grid gap-y-8 md:grid-cols-2 md:gap-x-10 md:py-4 lg:py-0 xl:gap-x-0">
                     <div className="xl:ml-auto xl:max-w-xs">
-                        <p className="services-title mb-6  text-xl text-gray xl:text-3xl">Design</p>
+                        <p className="services-title mb-6  text-xl text-gray-100 xl:text-3xl">Design</p>
                         <p className="services-description text-sm  leading-snug">
                             Establishing the right visual connection with your customers and users by creating
                             eye-catching and memorable designs as well as meaningful user experience.
                         </p>
                     </div>
                     <div className="xl:ml-auto xl:max-w-xs">
-                        <p className="services-title mb-6 text-xl text-gray xl:text-3xl">Development</p>
+                        <p className="services-title mb-6 text-xl text-gray-100 xl:text-3xl">Development</p>
                         <p className="services-description text-sm leading-snug">
                             Implementing your project with scalable architecture design, modern technology, and an
                             excellent level of data security.

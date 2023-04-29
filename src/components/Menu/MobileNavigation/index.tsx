@@ -3,8 +3,8 @@ import Image from "next/image";
 import Burger from "../../../../public/images/burger.svg";
 import CloseIcon from "../../../../public/images/close-icon.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../../slices/ui";
-import { RootState } from "../../../pages/_app";
+import { toggleMenu } from "@/slices/ui";
+import { RootState } from "@/pages/_app";
 
 const MobileNavigation = () => {
     const isMenuOpen = useSelector<RootState>(state => state.ui.isMenuOpen);
@@ -33,9 +33,9 @@ const MobileNavigation = () => {
                     <div>
                         <nav>
                             <ul className="text-xl">
-                                <li className="border-b border-gray py-5 md:text-3xl">Services</li>
-                                <li className="border-b border-gray py-5 md:text-3xl">Work</li>
-                                <li className="border-b border-gray py-5 md:text-3xl">About</li>
+                                <li className="border-b border-gray-100 py-5 md:text-3xl">Services</li>
+                                <li className="border-b border-gray-100 py-5 md:text-3xl">Work</li>
+                                <li className="border-b border-gray-100 py-5 md:text-3xl">About</li>
                                 <li className="py-5 md:text-3xl">Contact</li>
                             </ul>
                         </nav>

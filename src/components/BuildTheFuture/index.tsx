@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Crystal from "../../../public/images/crystal.webp";
+import Crystal from "@/public/images/crystal.webp";
 import { useDispatch } from "react-redux";
-import { toggleContactForm, toggleScroll } from "../../slices/ui";
-import { OutlineButton } from "../../shared/uiKit/Button";
-import ArrowUpRight from "../../shared/uiKit/icons/ArrowUpRight";
+import ArrowUpRight from "@/shared/uiKit/icons/ArrowUpRight";
+import { OutlineButton } from "@/shared/uiKit/Button";
+import { toggleContactForm, toggleScroll } from "@/slices/ui";
 
 const BuildTheFuture = () => {
     const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import Image from "next/image";
 import ActionArrow from "../../../public/images/action-arrow.svg";
 import ActionBlock from "../ActionBlock";
 import { useDispatch } from "react-redux";
-import { toggleContactForm, toggleScroll } from "../../slices/ui";
+import { toggleContactForm, toggleScroll } from "@/slices/ui";
 
 const ServiceCases = () => {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const ServiceCases = () => {
             <div className="flex flex-col xl:gap-14">
                 <div className="mb-8 grid gap-6 xl:gap-8">
                     <div className="px-6">
-                        <h3 className="services-list-subtitle text-3xl italic text-gray md:text-4xl lg:text-5xl xl:text-6xl">
+                        <h3 className="services-list-subtitle text-3xl italic text-gray-100 md:text-4xl lg:text-5xl xl:text-6xl">
                             Design
                         </h3>
                     </div>
@@ -30,25 +30,25 @@ const ServiceCases = () => {
                             Web Design
                         </h4>
                         <div className="flex flex-wrap">
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Prototyping
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Wireframes
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 UX Analytics
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Adaptive
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Style Guide
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Webflow
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Transfer to Development
                             </div>
                         </div>
@@ -56,22 +56,22 @@ const ServiceCases = () => {
                     <ActionBlock>
                         <h4 className="service-list-item-title mb-8 text-3xl xl:text-4xl">Apps Design</h4>
                         <div className="flex flex-wrap">
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 UX Analytics
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Design All Screens
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Design Concept
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Motion Design
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Style Guide
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Transfer to Development
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const ServiceCases = () => {
                 </div>
                 <div className="grid gap-6 xl:gap-8">
                     <div className="px-6">
-                        <h3 className="services-list-subtitle text-3xl italic text-gray md:text-4xl lg:text-5xl xl:text-6xl">
+                        <h3 className="services-list-subtitle text-3xl italic text-gray-100 md:text-4xl lg:text-5xl xl:text-6xl">
                             Development
                         </h3>
                     </div>
@@ -100,22 +100,22 @@ const ServiceCases = () => {
                             Corporate Websites <br className="md:hidden" />& Landing Pages{" "}
                         </h4>
                         <div className="flex flex-wrap">
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Webflow
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Valid Code
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 CMS
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Easy to Manage
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Style Guide
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Creative Interactions
                             </div>
                         </div>
@@ -126,28 +126,28 @@ const ServiceCases = () => {
                             e-Commerce <br className="md:hidden" /> Web Apps
                         </h4>
                         <div className="flex flex-wrap">
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Webflow
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Square Space
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Valid Code
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Adaptive
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Shopify
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Easy to manage
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Usability
                             </div>
-                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray px-3 py-2 text-xs">
+                            <div className="service-list-item-direction mb-3 mr-2 rounded-md border border-gray-100 px-3 py-2 text-xs">
                                 Style Guide
                             </div>
                         </div>

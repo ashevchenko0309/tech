@@ -1,6 +1,7 @@
 import React, { FC, PropsWithChildren, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import SliderArrow from "@/shared/uiKit/icons/SliderArrow";
+import Dot from "@/components/cases/components/CaseSlider/components/Dot";
 
 enum SliderNavigationWay {
     LEFT,
@@ -9,50 +10,69 @@ enum SliderNavigationWay {
 
 const CaseSlider: FC<PropsWithChildren> = ({ children }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [loaded, setLoaded] = useState(false);
+    const [isSliderLoaded, setIsSliderLoaded] = useState(false);
 
     const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
         initial: 0,
         slides: {
             origin: "center",
             perView: 1,
-            spacing: 15,
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);
         },
         created() {
-            setLoaded(true);
+            setIsSliderLoaded(true);
         },
     });
 
+    const slidesCount = instanceRef.current?.track?.details?.slides?.length ?? 0;
+    const isFirstSlide = currentSlide === 0;
+    const isLastSlide = currentSlide == slidesCount - 1;
+    const dots = new Array(slidesCount).fill(null).map((_, index) => index);
+
     const onArrowClick = (way: SliderNavigationWay) => () => {
         if (way === SliderNavigationWay.LEFT) {
-            if (currentSlide === 0) return;
+            if (isFirstSlide) return;
             return instanceRef.current?.prev();
         }
 
-        if (currentSlide === instanceRef.current?.track?.details?.slides?.length ?? 0 - 1) return;
+        if (isLastSlide) return;
         return instanceRef.current?.next();
     };
 
     return (
-        <div className="relative">
+        <div className="relative flex h-full cursor-grab flex-col">
             <div
-                className="absolute left-32 top-1/2 z-10 -translate-x-1/2 cursor-pointer rounded-full border border-gray p-3"
+                className="absolute left-8 top-1/2 z-10 -translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
                 onClick={onArrowClick(SliderNavigationWay.LEFT)}
             >
-                <SliderArrow className="h-8 w-8 rotate-180 stroke-white" />
+                <SliderArrow className={`h-8 w-8 rotate-180 ${isFirstSlide ? "stroke-gray-100" : "stroke-white"}`} />
             </div>
-            <div ref={sliderRef} className="keen-slider">
+            <div ref={sliderRef} className="keen-slider h-full">
                 {children}
             </div>
             <div
-                className="absolute right-32 top-1/2 z-10 -translate-x-1/2 cursor-pointer rounded-full border border-gray p-3"
+                className="absolute right-8 top-1/2 z-10 translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
                 onClick={onArrowClick(SliderNavigationWay.RIGHT)}
             >
-                <SliderArrow className="h-8 w-8 stroke-white" />
+                <SliderArrow className={`h-8 w-8 ${isLastSlide ? "stroke-gray-100" : "stroke-white"}`} />
             </div>
+            {isSliderLoaded && (
+                <div className="mt-10 flex justify-center gap-2">
+                    {dots.map(idx => {
+                        return (
+                            <Dot
+                                key={idx}
+                                onClick={() => {
+                                    instanceRef.current?.moveToIdx(idx);
+                                }}
+                                isActive={currentSlide === idx}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 };

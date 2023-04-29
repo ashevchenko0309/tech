@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import MainCover from "../../../public/images/main-cover.webp";
 import { useDispatch } from "react-redux";
-import { toggleContactForm, toggleScroll } from "../../slices/ui";
-import { OutlineButton } from "../../shared/uiKit/Button";
-import ArrowUpRight from "../../shared/uiKit/icons/ArrowUpRight";
+import { toggleContactForm, toggleScroll } from "@/slices/ui";
+import MainCover from "@/public/images/main-cover.webp";
+import { OutlineButton } from "@/shared/uiKit/Button";
+import ArrowUpRight from "@/shared/uiKit/icons/ArrowUpRight";
 
 const Banner = () => {
     const dispatch = useDispatch();

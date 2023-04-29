@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { works } from "./constants";
 import { useDispatch } from "react-redux";
-import { CaseItem, toggleCase, toggleScroll } from "../../slices/ui";
+import { CaseItem, toggleCase, toggleScroll } from "@/slices/ui";
 
 const Works = () => {
     const dispatch = useDispatch();
@@ -17,10 +17,11 @@ const Works = () => {
             <div className="grid gap-y-6 md:grid-cols-2 md:gap-10">
                 {works.map(({ image, description, app, title }) => (
                     <div key={title} className="cursor-pointer" onClick={onOpenCase(app)}>
+                        {app}
                         <Image src={image} alt="Health Care app" className="mb-3 w-full rounded-2xl" />
                         <div className="text-center">
-                            <h3 className="case-title text-md mb-1.5 leading-none md:text-2xl">{title}</h3>
-                            <p className="case-description text-xs leading-none text-gray md:text-base">
+                            <h3 className="case-title text-base mb-1.5 leading-none md:text-2xl">{title}</h3>
+                            <p className="case-description text-xs leading-none text-gray-100 md:text-base">
                                 {description}
                             </p>
                         </div>

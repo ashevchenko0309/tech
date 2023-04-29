@@ -11,11 +11,9 @@ import { RootState } from "@/pages/_app";
 import { CaseItem, toggleCase, toggleScroll } from "@/slices/ui";
 import CaseContainer from "@/components/cases/components/CaseContainer";
 import CaseSlider from "@/components/cases/components/CaseSlider";
-import ImageOne from "@/public/images/crus.webp";
-import ImageTwo from "@/public/images/digital.webp";
 
 const HealthCareAdminCase: FC = () => {
-    const isOpen = useSelector<RootState, boolean>(state => state.ui.activeCase === CaseItem.CFUS);
+    const isOpen = useSelector<RootState, boolean>(state => state.ui.activeCase === CaseItem.HEALTHCARE_ADMIN);
     const dispatch = useDispatch();
 
     const onClose = () => {
@@ -26,30 +24,52 @@ const HealthCareAdminCase: FC = () => {
     if (!isOpen) return null;
 
     return (
-        <CaseContainer>
-            <div className="mb-20 flex items-start justify-between">
-                <div>
-                    <p className="text-3xl">Laboratory Management System</p>
-                    <p className="text-lg text-gray">Web Design & Development</p>
+        <CaseContainer className="h-screen">
+            <div className="grid h-full">
+                <div className="mb-20 flex items-start justify-between">
+                    <div>
+                        <p className="text-3xl">Laboratory Management System</p>
+                        <p className="text-lg text-gray-100">Web Design & Development</p>
+                    </div>
+                    <div onClick={onClose} className="cursor-pointer">
+                        <Image src={CloseIcon} alt="close" className="md:w-10" />
+                    </div>
                 </div>
-                <div onClick={onClose} className="cursor-pointer">
-                    <Image src={CloseIcon} alt="close" className="md:w-10" />
+                <div className="flex overflow-hidden">
+                    <div className="overflow-hidden">
+                        <CaseSlider>
+                            <div className="keen-slider__slide">
+                                <Image
+                                    src={ScreenOne}
+                                    alt="First health care app screen"
+                                    className="mx-auto h-full w-auto"
+                                />
+                            </div>
+                            <div className="keen-slider__slide">
+                                <Image
+                                    src={ScreenTwo}
+                                    alt="Second health care app screen"
+                                    className="mx-auto h-full w-auto"
+                                />
+                            </div>
+                            <div className="keen-slider__slide">
+                                <Image
+                                    src={ScreenThree}
+                                    alt="Third health care app screen"
+                                    className="mx-auto h-full w-auto"
+                                />
+                            </div>
+                            <div className="keen-slider__slide">
+                                <Image
+                                    src={ScreenFour}
+                                    alt="Fourth health care app screen"
+                                    className="mx-auto h-full w-auto"
+                                />
+                            </div>
+                        </CaseSlider>
+                    </div>
                 </div>
             </div>
-            <CaseSlider>
-                <div className="keen-slider__slide px-32">
-                    <Image src={ScreenOne} alt="First health care app screen" className="mx-auto" />
-                </div>
-                <div className="keen-slider__slide px-32">
-                    <Image src={ScreenTwo} alt="Second health care app screen" className="mx-auto" />
-                </div>
-                <div className="keen-slider__slide px-32">
-                    <Image src={ScreenThree} alt="Third health care app screen" className="mx-auto" />
-                </div>
-                <div className="keen-slider__slide px-32">
-                    <Image src={ScreenFour} alt="Fourth health care app screen" className="mx-auto" />
-                </div>
-            </CaseSlider>
         </CaseContainer>
     );
 };
