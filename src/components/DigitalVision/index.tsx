@@ -5,7 +5,7 @@ import Digital from "../../../public/images/digital.webp";
 
 const DigitalVision = () => {
     return (
-        <div className="digital relative rounded-t-4xl px-8 pb-12 pt-6 md:pb-40 md:pt-20">
+        <div className="digital relative rounded-t-4xl px-8 pb-12 pt-6 md:pb-40 md:pt-20" id="about">
             <div className="flex flex-row justify-center gap-10 text-center xl:gap-20">
                 <Image src={DigitalVisionIcon} alt="digital vision" className="hidden md:block md:w-24 xl:self-start" />
                 <h2 className="flex flex-col text-4xl md:text-5xl lg:text-6xl xl:text-7xl">

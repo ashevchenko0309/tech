@@ -6,12 +6,16 @@
     --index: calc(1vw + 1vh);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    @apply bg-black text-white overflow-x-hidden text-slate;
+    @apply bg-black overflow-x-hidden text-slate;
 }
 
 .header {
-    @apply left-0 w-full flex justify-between z-10 items-center top-4 px-6 lg:top-0 lg:h-16
+    @apply left-0 w-full fixed flex justify-between z-20 items-center top-4 px-6 lg:top-0 lg:h-16
 }
 
 .banner-image {

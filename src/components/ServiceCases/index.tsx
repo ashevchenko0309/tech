@@ -13,7 +13,7 @@ const ServiceCases = () => {
     };
 
     return (
-        <div className="mb-8 cursor-default px-6 xl:mb-40 xl:px-8">
+        <div className="mb-8 cursor-default px-6 xl:mb-40 xl:px-8" id="services">
             <h2 className="services-list-title mb-10 text-4xl md:text-5xl lg:text-6xl xl:mb-14 xl:text-7xl">
                 Services
             </h2>

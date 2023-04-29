@@ -19,7 +19,7 @@ const ContactForm: FC = () => {
 
     return (
         <div
-            className={`fixed left-0 top-0 z-10 block h-full w-full overflow-x-auto bg-black px-6 pt-4 md:p-12 lg:px-12 lg:py-20 xl:grid`}
+            className={`fixed left-0 top-0 z-30 block h-full w-full overflow-x-auto bg-black px-6 pt-4 md:p-12 lg:px-12 lg:py-20 xl:grid`}
         >
             <div className="mb-20 flex items-start justify-between">
                 <div>

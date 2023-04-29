@@ -24,6 +24,13 @@ const DynamicLocalizationToolCase = dynamic(
 );
 const DynamicELearningAppCase = dynamic(() => import("../components/cases/ELearningAppCase/ELearningAppCase"));
 
+/* TODO: Menu scroll to section + fix overflow */
+/* TODO: Fix sliders on mobile */
+/* TODO: Fix baba on background */
+/* TODO: Create select component */
+/* TODO: Form and send to email + maybe in future send details to TG */
+/* TODO: Animations */
+
 export default function Home() {
     const isBodyScrollable = useSelector<RootState>(state => state.ui.isScrollable);
 
@@ -56,7 +63,7 @@ export default function Home() {
                 {/* TODO: Change url */}
                 <meta property="og:url" content="https://www.yourdevelopmentagency.com" />
                 {/* TODO: Change url */}
-                <meta property="og:image" content="https://www.yourdevelopmentagency.com/images/logo.png" />
+                <meta property="og:image" content="https://www.yourdevelopmentagency.com/images/preview.png" />
                 <meta property="og:image:alt" content="4k:Tech" />
                 <meta property="og:site_name" content="4k:Tech" />
                 <meta name="twitter:title" content="4k:Tech | Expert Development Agency | Custom Software Solutions" />
@@ -64,7 +71,7 @@ export default function Home() {
                     name="twitter:description"
                     content="We are a leading development agency offering custom software solutions that are tailored to your business needs. Our top developers provide expert services to help your company succeed."
                 />
-                <meta name="twitter:image" content="https://www.yourdevelopmentagency.com/images/logo.png" />
+                <meta name="twitter:image" content="https://www.yourdevelopmentagency.com/images/preview.png" />
                 <meta name="twitter:card" content="summary_large_image" />
                 {/* TODO: Change twitter */}
                 <meta name="twitter:site" content="@yourhandle" />
