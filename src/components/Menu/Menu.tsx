@@ -16,7 +16,9 @@ const Menu: FC = () => {
             <nav className="col-span-4 ml-auto hidden pr-8 text-lg lg:block">
                 <ul className="menu-list flex items-center gap-8">
                     <li>
-                        <a href="#about" className="cursor-pointer">About</a>
+                        <a href="#about" className="cursor-pointer">
+                            About
+                        </a>
                     </li>
                     <li>
                         <a href="#works" className="cursor-pointer">
@@ -24,7 +26,9 @@ const Menu: FC = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#services" className="cursor-pointer">Services</a>
+                        <a href="#services" className="cursor-pointer">
+                            Services
+                        </a>
                     </li>
                     <li className="ml-20 cursor-pointer" onClick={onContact}>
                         Contact
