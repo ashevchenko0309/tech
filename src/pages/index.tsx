@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import SayHello from "../components/SayHello";
 
-const DynamicContactForm = dynamic(() => import("../components/ContactForm/ContactForm"));
+const DynamicContactForm = dynamic(() => import("../components/ContactForm"));
 const DynamicCFUSLandingCase = dynamic(() => import("../components/cases/CFUSLandingCase/CFUSLandingCase"));
 const DynamicHealthCareAdminCase = dynamic(() => import("../components/cases/HealthCareAdminCase/HealthCareAdminCase"));
 const DynamicHealthCareAppCase = dynamic(() => import("../components/cases/HealthCareAppCase/HealthCareAppCase"));
@@ -24,7 +24,6 @@ const DynamicLocalizationToolCase = dynamic(
 );
 const DynamicELearningAppCase = dynamic(() => import("../components/cases/ELearningAppCase/ELearningAppCase"));
 
-/* TODO: Menu scroll to section + fix overflow */
 /* TODO: Fix sliders on mobile */
 /* TODO: Fix baba on background */
 /* TODO: Create select component */
