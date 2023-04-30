@@ -1,16 +1,18 @@
-import React, { FC, FormEvent, useEffect, useState } from "react";
-import Image from "next/image";
-import CloseIcon from "../../../public/images/close-icon.svg";
+import React, { FC, FormEvent, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleContactForm, toggleScroll } from "@/slices/ui";
 import Select from "@/shared/uiKit/Select";
 import { CLOSE_SUBMITTED_FORM_TIMEOUT, SERVICES_OPTIONS } from "@/components/ContactForm/constants";
+import { ErrorCode, FileRejection, useDropzone } from "react-dropzone";
+import CloseIcon from "@/shared/uiKit/icons/CloseIcon";
+import Attachments from "@/components/ContactForm/components/Attachments";
 
 let submitTimeoutId: ReturnType<typeof setTimeout> | number | null = null;
 
 const ContactFormContainer: FC = () => {
     const dispatch = useDispatch();
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const files = useRef<File[]>([]);
 
     const onCloseForm = () => {
         dispatch(toggleScroll());
@@ -39,8 +41,14 @@ const ContactFormContainer: FC = () => {
             formData[el.name] = el.value;
         }
 
+        console.log(files.current);
+
         setIsSubmitted(true);
         onSuccessSubmit();
+    };
+
+    const onDropFile = (droppedFiles: File[]) => {
+        files.current = droppedFiles;
     };
 
     useEffect(() => {
@@ -60,7 +68,7 @@ const ContactFormContainer: FC = () => {
                     <p className="text-4xl font-light italic md:text-6xl">future together</p>
                 </div>
                 <div onClick={onCloseForm} className="cursor-pointer">
-                    <Image src={CloseIcon} alt="close" className="md:w-10" />
+                    <CloseIcon className="h-10 w-10 fill-slate" />
                 </div>
             </div>
             <div className={isSubmitted ? "hidden" : "block"}>
@@ -75,7 +83,7 @@ const ContactFormContainer: FC = () => {
                         />
                         <Select options={SERVICES_OPTIONS} placeholder="Select service" />
                     </div>
-                    <div className="flex flex-col gap-6">
+                    <div className="row-span-2 flex flex-col gap-6">
                         <input
                             name="Email"
                             type="email"
@@ -87,10 +95,10 @@ const ContactFormContainer: FC = () => {
                             name="Description"
                             maxLength={2000}
                             placeholder="Project Description"
-                            className="min-h-[100px] w-full rounded-lg border border-gray-100 bg-black p-5 placeholder:text-gray-100"
+                            className="max-h-44 min-h-[100px] w-full rounded-lg border border-gray-100 bg-black p-5 placeholder:text-gray-100"
                         />
                     </div>
-                    {/* TODO: Attachment */}
+                    <Attachments onDrop={onDropFile} />
                     <button className="w-full rounded-lg bg-white py-5 text-black md:col-span-2 md:mt-10">
                         Submit
                     </button>
