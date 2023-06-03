@@ -14,6 +14,7 @@ import ServiceCases from "../components/ServiceCases";
 import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import SayHello from "../components/SayHello";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 
 const DynamicContactForm = dynamic(() => import("../components/ContactForm"));
 const DynamicCFUSLandingCase = dynamic(() => import("../components/cases/CFUSLandingCase/CFUSLandingCase"));
@@ -24,6 +25,7 @@ const DynamicLocalizationToolCase = dynamic(
 );
 const DynamicELearningAppCase = dynamic(() => import("../components/cases/ELearningAppCase/ELearningAppCase"));
 
+/* TODO: Smooth scroll */
 /* TODO: Add Watch image case */
 /* TODO: Form and send to email + maybe in future send details to TG */
 /* TODO: Animations */

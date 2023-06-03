@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import DigitalVisionIcon from "../../../public/images/digital-vision-icon.svg";
 import Digital from "../../../public/images/digital.webp";
+import Parallax from "@/components/Parallax/Parallax";
 
 const DigitalVision = () => {
     return (
