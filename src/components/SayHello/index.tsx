@@ -3,12 +3,13 @@ import Image from "next/image";
 import ActionArrow from "../../../public/images/action-arrow.svg";
 import SayHelloImage from "../../../public/images/say-hello.webp";
 import { useDispatch } from "react-redux";
-import { toggleContactForm } from "../../slices/ui";
+import { toggleContactForm, toggleScroll } from "@/slices/ui";
 
 const SayHello = () => {
     const dispatch = useDispatch();
 
     const onOpenForm = () => {
+        dispatch(toggleScroll());
         dispatch(toggleContactForm());
     };
 
@@ -27,10 +28,8 @@ const SayHello = () => {
                     Say Hello
                     <Image
                         src={ActionArrow}
-                        width={72}
-                        height={72}
                         alt="action arrow"
-                        className="animate-action-arrow lg:self-start"
+                        className="h-10 w-10 animate-action-arrow md:h-16 md:w-16 lg:self-start"
                     />
                 </h2>
             </div>

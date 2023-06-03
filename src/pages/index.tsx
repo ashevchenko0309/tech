@@ -24,11 +24,7 @@ const DynamicLocalizationToolCase = dynamic(
 );
 const DynamicELearningAppCase = dynamic(() => import("../components/cases/ELearningAppCase/ELearningAppCase"));
 
-/* TODO: Fix sliders on mobile */
 /* TODO: Add Watch image case */
-/* TODO: Fix "scroll" button on landing cases */
-/* TODO: Fix arrow on say hello for mobile devices */
-/* TODO: Fix "say hello" open from event */
 /* TODO: Form and send to email + maybe in future send details to TG */
 /* TODO: Animations */
 
