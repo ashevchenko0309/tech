@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import CloseIcon from "../../../../public/images/close-icon.svg";
 
 import ScreenOne from "@/public/images/cases/health-care-app/1.webp";
 import ScreenTwo from "@/public/images/cases/health-care-app/2.webp";
@@ -11,6 +10,7 @@ import { RootState } from "@/pages/_app";
 import { CaseItem, toggleCase, toggleScroll } from "@/slices/ui";
 import CaseContainer from "@/components/cases/components/CaseContainer";
 import CaseSlider from "@/components/cases/components/CaseSlider";
+import CaseTitle from "@/components/cases/components/CaseTitle/CaseTitle";
 
 const HealthCareAppCase: FC = () => {
     const isOpen = useSelector<RootState, boolean>(state => state.ui.activeCase === CaseItem.HEALTHCARE_APP);
@@ -26,15 +26,7 @@ const HealthCareAppCase: FC = () => {
     return (
         <CaseContainer className="h-screen">
             <div className="grid h-full grid-rows-4 md:grid-rows-2">
-                <div className="mb-6 flex items-start justify-between">
-                    <div>
-                        <p className="text-3xl">Health care app</p>
-                        <p className="text-lg text-gray-100">UI/UX Design & Development</p>
-                    </div>
-                    <div onClick={onClose} className="cursor-pointer">
-                        <Image src={CloseIcon} alt="close" className="md:w-10" />
-                    </div>
-                </div>
+                <CaseTitle onClose={onClose} title="Health care app" description="UI/UX Design & Development" />
                 <div className="row-span-2 overflow-hidden">
                     <CaseSlider>
                         <div className="keen-slider__slide">

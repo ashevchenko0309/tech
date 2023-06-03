@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import CloseIcon from "@/public/images/close-icon.svg";
 
 import ScreenOne from "@/public/images/cases/localization-tool/1.webp";
 import ScreenTwo from "@/public/images/cases/localization-tool/2.webp";
@@ -10,6 +9,7 @@ import { RootState } from "@/pages/_app";
 import { CaseItem, toggleCase, toggleScroll } from "@/slices/ui";
 import CaseContainer from "@/components/cases/components/CaseContainer";
 import CaseSlider from "@/components/cases/components/CaseSlider";
+import CaseTitle from "@/components/cases/components/CaseTitle/CaseTitle";
 
 const LocalizationToolCase: FC = () => {
     const isOpen = useSelector<RootState, boolean>(state => state.ui.activeCase === CaseItem.LOCALIZATION_ADMIN);
@@ -25,15 +25,7 @@ const LocalizationToolCase: FC = () => {
     return (
         <CaseContainer className="h-screen">
             <div className="grid h-full grid-rows-4 md:grid-rows-2">
-                <div className="mb-6 flex items-start justify-between">
-                    <div>
-                        <p className="text-3xl">Localization Web app</p>
-                        <p className="text-lg text-gray-100">Web Design & Development</p>
-                    </div>
-                    <div onClick={onClose} className="cursor-pointer">
-                        <Image src={CloseIcon} alt="close" className="md:w-10" />
-                    </div>
-                </div>
+                <CaseTitle title="Localization Web app" description="Web Design & Development" onClose={onClose} />
                 <div className="row-span-2 overflow-hidden">
                     <CaseSlider>
                         <div className="keen-slider__slide">
