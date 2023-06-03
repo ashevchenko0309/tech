@@ -22,7 +22,12 @@ const CFUSLandingCase: FC = () => {
     return (
         <CaseContainer>
             <div className="mb-20 flex items-start justify-between">
-                <CaseTitle title="Crowdfunding Landing page" description="Web Design & Development" onClose={onClose} />
+                <CaseTitle
+                    title="Crowdfunding Landing page"
+                    description="Web Design & Development"
+                    onClose={onClose}
+                    isScrollable
+                />
             </div>
             <Image src={ScreenOne} alt="First health care app screen" />
         </CaseContainer>
