@@ -24,9 +24,9 @@ const ELearningAppCase: FC = () => {
 
     return (
         <CaseContainer className="h-screen">
-            <div className="grid h-full grid-rows-4 md:grid-rows-2">
+            <div className="grid h-full grid-rows-4 lg:grid-rows-6">
                 <CaseTitle title="e-Learning Web app" description="Web Design & Development" onClose={onClose} />
-                <div className="row-span-2 overflow-hidden">
+                <div className="row-span-2 overflow-hidden lg:row-span-5">
                     <CaseSlider>
                         <div className="keen-slider__slide">
                             <Image
