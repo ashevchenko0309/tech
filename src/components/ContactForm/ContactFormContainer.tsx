@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { toggleContactForm, toggleScroll } from "@/slices/ui";
 import Select from "@/shared/uiKit/Select";
 import { CLOSE_SUBMITTED_FORM_TIMEOUT, SERVICES_OPTIONS } from "@/components/ContactForm/constants";
-import { ErrorCode, FileRejection, useDropzone } from "react-dropzone";
 import CloseIcon from "@/shared/uiKit/icons/CloseIcon";
 import Attachments from "@/components/ContactForm/components/Attachments";
 

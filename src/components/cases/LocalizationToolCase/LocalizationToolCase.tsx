@@ -24,7 +24,7 @@ const LocalizationToolCase: FC = () => {
 
     return (
         <CaseContainer className="h-screen">
-            <div className="grid h-full">
+            <div className="grid h-full grid-rows-4 md:grid-rows-2">
                 <div className="mb-6 flex items-start justify-between">
                     <div>
                         <p className="text-3xl">Localization Web app</p>
@@ -34,7 +34,7 @@ const LocalizationToolCase: FC = () => {
                         <Image src={CloseIcon} alt="close" className="md:w-10" />
                     </div>
                 </div>
-                <div className="overflow-hidden">
+                <div className="row-span-2 overflow-hidden">
                     <CaseSlider>
                         <div className="keen-slider__slide">
                             <Image

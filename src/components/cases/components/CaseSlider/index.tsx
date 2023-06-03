@@ -44,33 +44,49 @@ const CaseSlider: FC<PropsWithChildren> = ({ children }) => {
     return (
         <div className="relative flex h-full cursor-grab flex-col">
             <div
-                className="absolute left-8 top-1/2 z-10 -translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
+                className="absolute left-8 top-1/2 z-10 hidden -translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
                 onClick={onArrowClick(SliderNavigationWay.LEFT)}
             >
                 <SliderArrow className={`h-8 w-8 rotate-180 ${isFirstSlide ? "stroke-gray-100" : "stroke-white"}`} />
             </div>
-            <div ref={sliderRef} className="keen-slider h-full">
+            <div ref={sliderRef} className="keen-slider mb-10 h-full">
                 {children}
             </div>
             <div
-                className="absolute right-8 top-1/2 z-10 translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
+                className="absolute right-8 top-1/2 z-10 hidden translate-x-1/2 cursor-pointer rounded-full border border-gray-100 p-3"
                 onClick={onArrowClick(SliderNavigationWay.RIGHT)}
             >
                 <SliderArrow className={`h-8 w-8 ${isLastSlide ? "stroke-gray-100" : "stroke-white"}`} />
             </div>
             {isSliderLoaded && (
-                <div className="mt-10 flex justify-center gap-2">
-                    {dots.map(idx => {
-                        return (
-                            <Dot
-                                key={idx}
-                                onClick={() => {
-                                    instanceRef.current?.moveToIdx(idx);
-                                }}
-                                isActive={currentSlide === idx}
-                            />
-                        );
-                    })}
+                <div className="flex w-full items-center justify-between">
+                    <div
+                        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-100"
+                        onClick={onArrowClick(SliderNavigationWay.LEFT)}
+                    >
+                        <SliderArrow
+                            className={`h-6 w-6 rotate-180 ${isFirstSlide ? "stroke-gray-100" : "stroke-white"}`}
+                        />
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        {dots.map(idx => {
+                            return (
+                                <Dot
+                                    key={idx}
+                                    onClick={() => {
+                                        instanceRef.current?.moveToIdx(idx);
+                                    }}
+                                    isActive={currentSlide === idx}
+                                />
+                            );
+                        })}
+                    </div>
+                    <div
+                        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-100"
+                        onClick={onArrowClick(SliderNavigationWay.RIGHT)}
+                    >
+                        <SliderArrow className={`h-6 w-6 ${isLastSlide ? "stroke-gray-100" : "stroke-white"}`} />
+                    </div>
                 </div>
             )}
         </div>

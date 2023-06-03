@@ -19,7 +19,7 @@ const Works = () => {
                     <div key={title} className="cursor-pointer" onClick={onOpenCase(app)}>
                         <Image src={image} alt="Health Care app" className="mb-3 w-full rounded-2xl" />
                         <div className="text-center">
-                            <h3 className="case-title text-base mb-1.5 leading-none md:text-2xl">{title}</h3>
+                            <h3 className="case-title mb-1.5 text-base leading-none md:text-2xl">{title}</h3>
                             <p className="case-description text-xs leading-none text-gray-100 md:text-base">
                                 {description}
                             </p>

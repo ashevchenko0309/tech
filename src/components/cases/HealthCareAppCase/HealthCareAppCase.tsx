@@ -25,17 +25,17 @@ const HealthCareAppCase: FC = () => {
 
     return (
         <CaseContainer className="h-screen">
-            <div className="grid h-full">
+            <div className="grid h-full grid-rows-4 md:grid-rows-2">
                 <div className="mb-6 flex items-start justify-between">
                     <div>
-                        <p className="text-3xl">Localization Web app</p>
-                        <p className="text-lg text-gray-100">Web Design & Development</p>
+                        <p className="text-3xl">Health care app</p>
+                        <p className="text-lg text-gray-100">UI/UX Design & Development</p>
                     </div>
                     <div onClick={onClose} className="cursor-pointer">
                         <Image src={CloseIcon} alt="close" className="md:w-10" />
                     </div>
                 </div>
-                <div className="overflow-hidden">
+                <div className="row-span-2 overflow-hidden">
                     <CaseSlider>
                         <div className="keen-slider__slide">
                             <Image
